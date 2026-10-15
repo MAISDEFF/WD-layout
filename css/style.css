@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6, p {
 .video-mp4 {
   width: 1100px;
 }
-/* Gallery */
+/* gallery */
 .gallery {
   padding-top: 28px;
   background-color: var(--white-color);
@@ -222,19 +222,40 @@ h1, h2, h3, h4, h5, h6, p {
 .gallery__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
+  justify-items: center;
+  gap: 0;
 }
-.galery__img {
-  width: 480px;
-  height: 480px;
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
-.galery__img:hover {
-  color: var(--accent-color);
-  background-color: #fff;
+.gallery__img {
+  display: block;
+  width: 100%;
 }
-/* Company */
+.gallery__item::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(52, 84, 122, 0.8);
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery__item::after {
+  content: url(../img/gallery.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery__item:hover::after,
+.gallery__item:hover::before {
+  opacity: 1;
+}
+/* company */
 .company {
   background-color: var(--white-color);
   padding: 72px 0 100px;
@@ -244,7 +265,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   gap: 30px
 }
-/* Form */
+/* form */
 .forms {
   background-color: var(--light-color);
   padding: 97px 0 100px;
@@ -315,7 +336,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: var(--white-color);
 }
 
-/* Footer */
+/* footer */
 .footer {
   padding: 50px 0;
   background-color: var(--accent-color);
