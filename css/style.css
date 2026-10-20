@@ -126,10 +126,9 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 100px 0 98px;
   background-color: var(--accent-color);
 }
-.projects__container {   
-}
 .projects__items {
   display: flex;
+  flex-wrap: wrap;
   gap: 49px;
   justify-content: center;
   padding: 3px 20px 0 0;
@@ -186,8 +185,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 12px;
 }
 .skills__img {
-  width: 555px;
-  height: 450px;
+  max-width: 555px;
+  max-height: 450px;
 }
 .video {
   padding: 100px 0 83px;
@@ -263,6 +262,7 @@ h1, h2, h3, h4, h5, h6, p {
 .company__container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px
 }
 /* form */
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6, p {
   gap: 30px;
 }
 .form__block-input {
-  width: 255px;
+  max-width: 255px;
   height: 50px;
   border: none;
   padding: 17px 20px;
@@ -365,4 +365,63 @@ h1, h2, h3, h4, h5, h6, p {
 .footer__links {
   display: flex;
   gap: 22px;
+}
+
+/* Media */
+@media screen and (max-width: 1110px) {
+  .header__menu {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .header__menu-links {
+    flex-direction: column;
+  }
+  .header__menu-title {
+    margin-bottom: 15px;
+  }
+  .header__about {
+    gap: 50px;
+    margin: 0;
+  }
+  .header__about-h1 {
+    font-size: 30px;
+  }
+  .skills__items {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px
+  }
+  .video-mp4 {
+    width: 600px;
+  }
+  .footer__info {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header__about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header__about-a {
+    margin: 0 auto;
+  }
+  .skills__item {
+    text-align: center;
+  }
+  .skills__item-span {
+    width: 300px;
+  }
+  .skills__img {
+    width: 355px;
+    height: 250px;
+  }
+  .video-mp4 {
+    width: 355px;
+  }
+  .company__img {
+    width: 155px;
+  }
+
 }
