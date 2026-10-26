@@ -6,7 +6,7 @@
 
 ## 🔗 Демонстрация
 
-[Посмотреть проект на GitHub](https://github.com/MAISDEFF)
+[Посмотреть проект](https://maisdeff.github.io/WD-layout/)
 
 ## 📌 Особенности проекта
 
