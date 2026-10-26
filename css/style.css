@@ -71,8 +71,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 80px;
 }
 .header__about-img {
-  width: 357px;
-  height: 231.36px;
+  max-width: 357px;
+  width: 100%;
 }
 .header__about-h1 {
   font-size: 48px;
@@ -186,6 +186,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .skills__img {
   max-width: 555px;
+  width: 100%;
   max-height: 450px;
 }
 .video {
@@ -211,7 +212,8 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 .video-mp4 {
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
 }
 /* gallery */
 .gallery {
@@ -294,6 +296,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .form__block-input {
   max-width: 255px;
+  width: 100%;
   height: 50px;
   border: none;
   padding: 17px 20px;
@@ -304,7 +307,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .forms__block-textarea {
   resize: none;
-  width: 540px;
+  max-width: 540px;
+  width: 100%;
   height: 175px;
   border: none;
   padding: 17px 20px;
@@ -365,6 +369,7 @@ h1, h2, h3, h4, h5, h6, p {
 .footer__links {
   display: flex;
   gap: 22px;
+  flex-wrap: wrap;
 }
 
 /* Media */
@@ -391,8 +396,9 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: center;
     gap: 40px
   }
-  .video-mp4 {
-    width: 600px;
+  .form__block-header {
+    flex-direction: column;
+    gap: 5px;
   }
   .footer__info {
     padding: 0 15px;
@@ -407,21 +413,16 @@ h1, h2, h3, h4, h5, h6, p {
   .header__about-a {
     margin: 0 auto;
   }
+  .skills__items {
+    padding: 0 15px;
+  }
   .skills__item {
     text-align: center;
   }
   .skills__item-span {
-    width: 300px;
-  }
-  .skills__img {
-    width: 355px;
-    height: 250px;
-  }
-  .video-mp4 {
-    width: 355px;
+    width: 200px;
   }
   .company__img {
     width: 155px;
   }
-
 }
